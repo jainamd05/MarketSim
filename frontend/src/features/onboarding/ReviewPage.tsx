@@ -176,7 +176,7 @@ export function ReviewPage() {
             </div>
             <p className="mt-2 text-xs text-ink-3">
               {effectiveMode === "demo"
-                ? "Uses saved synthetic fixtures – no API keys or credits. Fixtures cover the demonstration profile; other profiles complete in a clearly degraded state."
+                ? "Uses synthetic demo data – no API keys or credits. The demonstration profile replays saved fixtures; any other profile is filled in with deterministic synthetic responses."
                 : `Makes up to ${config?.max_serpapi_requests_per_analysis ?? 12} genuine SerpApi requests and reports any failure honestly.`}
               {!config?.live_available && " Live mode needs SERPAPI_API_KEY in backend/.env."}
             </p>

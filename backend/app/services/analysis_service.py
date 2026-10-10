@@ -20,7 +20,7 @@ from app.config import Settings
 from app.db import Database
 from app.llm.adapter import get_llm
 from app.schemas.analysis import SearchOutcome
-from app.serpapi.gateway import FixtureStore, ResponseCache, SerpApiGateway
+from app.serpapi.gateway import FixtureStore, ResponseCache, SerpApiGateway, SyntheticFixtureStore
 
 log = logging.getLogger("marketsim.service")
 
@@ -71,6 +71,16 @@ class AnalysisService:
         return analysis_id
 
     # ------------------------------------------------------------------ run
+    def _demo_fixtures(self) -> FixtureStore:
+        """Recorded fixtures first; when enabled, synthetic payloads fill any gaps.
+
+        This keeps the demonstration profile byte-identical while letting any other
+        questionnaire answer produce a populated DEMO run.
+        """
+        if self.settings.demo_synthetic_fallback:
+            return SyntheticFixtureStore(self.settings.fixture_version)
+        return FixtureStore(self.settings.fixture_version)
+
     def build_runtime(self, run: models.AnalysisRun) -> AnalysisRuntime:
         emitter = EventEmitter(run.id, sink=lambda e: self._persist_event(run.id, e))
 
@@ -81,7 +91,7 @@ class AnalysisService:
         gateway = SerpApiGateway(
             mode=run.mode, settings=self.settings, budget=run.request_budget,
             cache=ResponseCache(self.db) if run.mode == "live" else None,
-            fixtures=FixtureStore(self.settings.fixture_version) if run.mode == "demo" else None,
+            fixtures=self._demo_fixtures() if run.mode == "demo" else None,
             transport=self.serpapi_transport, on_event=emitter.tool_event, persist=persist,
         )
         llm = get_llm(self.settings, self.llm_transport)

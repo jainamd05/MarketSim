@@ -53,6 +53,15 @@ def resolve_focuses(profile: BusinessProfileIn) -> list[FocusSpec]:
         if sub:
             out.append(FocusSpec(value=value, label=sub["label"], unit_basis=sub.get("unit_basis", "count"),
                                  terms=sub["terms"]))
+    if not out:
+        # Focus left "undecided" but nothing was selected to compare: fall back to
+        # category-level research so the analysis still runs instead of crashing.
+        cat = registry.category(profile.category)
+        if cat:
+            t = cat["terms"]
+            out.append(FocusSpec(value=profile.category, label=cat["label"], level="category", unit_basis="count",
+                                 terms={"product": t["trend"], "trend": t["trend"], "brand": t["brand"],
+                                        "store": t["trend"] + " store", "news": t["brand"]}))
     return out
 
 
@@ -94,7 +103,8 @@ def build_plan(profile: BusinessProfileIn, budget: int) -> ResearchPlan:
             for f in focuses:
                 add("competitor_discovery", search.ENGINE, search.build_params(f"{f.terms['brand']} {cname}", m),
                     f"Competitor websites for {f.label} in {cname}", 2, f.value, c)
-            news_term = focuses[0].terms["news"] if len(focuses) == 1 else cat.get("terms", {}).get("brand", focuses[0].terms["news"])
+            news_term = focuses[0].terms["news"] if len(focuses) == 1 else (
+                cat.get("terms", {}).get("brand") or (focuses[0].terms["news"] if focuses else "market"))
             add("market_news", news.ENGINE, news.build_params(f"{news_term} {cname}", m),
                 f"Recent market developments in {cname}", 2, None, c)
             for f in focuses[:2]:

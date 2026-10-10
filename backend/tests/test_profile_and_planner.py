@@ -103,3 +103,15 @@ def test_undecided_category_compares_category_level_terms():
     plan = build_plan(p, budget=12)
     assert [f.level for f in plan.focuses] == ["category", "category"]
     assert any("not recommending a 'best' business" in n for n in plan.notes)
+
+
+def test_undecided_focus_without_selection_falls_back_to_category_level():
+    """Regression: an empty focus list used to crash the supervisor with IndexError."""
+    p = BusinessProfileIn(business_type="online", business_stage="new", category="home_lifestyle",
+                          subcategory="undecided", compare_focuses=[], pilot_country="IN",
+                          sales_channel="own_website", sourcing_model="undecided", budget_band="undecided",
+                          primary_goal="find_products")
+    assert p.focus_values == []
+    plan = build_plan(p, budget=12)
+    assert [f.value for f in plan.focuses] == ["home_lifestyle"]
+    assert plan.planned, "the plan must still contain searches, not crash"

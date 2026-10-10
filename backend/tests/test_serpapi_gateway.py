@@ -6,7 +6,7 @@ import httpx
 import pytest
 
 from app.db import Database
-from app.serpapi.gateway import FixtureStore, ResponseCache, SerpApiGateway, cache_key
+from app.serpapi.gateway import FixtureStore, ResponseCache, SerpApiGateway, SyntheticFixtureStore, cache_key
 from tests.conftest import make_settings
 
 KEY = "test-secret-key-123"
@@ -170,6 +170,35 @@ def test_demo_mode_reads_versioned_fixtures(tmp_path):
     assert out.retrieved_at.year == 2026 and out.retrieved_at.month == 9  # fixture's own timestamp
     missing = gw.search("google_shopping", {"q": "not in fixtures"}, agent="t", purpose="t")
     assert missing.status == "fixture_missing" and missing.data is None
+
+
+def test_synthetic_fixture_store_generates_missing_requests(tmp_path):
+    """A request with no recorded fixture is synthesised so any form answer yields a demo run."""
+    settings = make_settings(tmp_path)
+    fixtures = SyntheticFixtureStore("v1")
+    gw = SerpApiGateway(mode="demo", settings=settings, fixtures=fixtures)
+    for engine, params in [
+        ("google_shopping", {"q": "organic cotton kurta", "gl": "in", "hl": "en"}),
+        ("google", {"q": "kurta brands", "gl": "in", "hl": "en", "google_domain": "google.co.in"}),
+        ("google_news", {"q": "apparel India", "gl": "in", "hl": "en"}),
+        ("google_maps", {"q": "bakery in Pune", "type": "search", "hl": "en", "gl": "in"}),
+        ("amazon", {"k": "protein powder", "amazon_domain": "amazon.in"}),
+    ]:
+        out = gw.search(engine, params, agent="t", purpose="t")
+        assert out.status == "ok" and out.data_origin == "demo_fixture", (engine, out.status)
+        assert out.result_count > 0
+    assert fixtures.generated_requests  # the gap filler was actually used
+    # The recorded demonstration-profile fixture is still preferred over synthesis.
+    recorded = gw.search("google_shopping", {"q": "healthy snacks pack", "gl": "in", "hl": "en"}, agent="t", purpose="t")
+    assert recorded.status == "ok" and recorded.result_count == 12
+
+
+def test_synthetic_payloads_are_deterministic(tmp_path):
+    settings = make_settings(tmp_path)
+    a = SyntheticFixtureStore("v1").lookup("google_shopping", {"q": "matcha powder", "gl": "in", "hl": "en"})
+    b = SyntheticFixtureStore("v1").lookup("google_shopping", {"q": "matcha powder", "gl": "in", "hl": "en"})
+    assert a == b and a and a["shopping_results"][0]["price"] == b["shopping_results"][0]["price"]
+    assert a["search_metadata"]["synthetic_generated"] is True
 
 
 def test_cache_key_ignores_api_key_and_param_order():

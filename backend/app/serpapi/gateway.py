@@ -173,6 +173,33 @@ class FixtureStore:
         return json.loads((self.dir / entry["file"]).read_text(encoding="utf-8"))
 
 
+class SyntheticFixtureStore(FixtureStore):
+    """DEMO fixture store that fabricates a synthetic payload when no recorded fixture exists.
+
+    Recorded fixtures are preferred (the demonstration profile stays byte-identical);
+    only requests with no saved fixture are generated, so *any* questionnaire answer
+    yields a populated demo run instead of an empty one. Synthetic payloads are
+    deterministic and clearly labelled (see :mod:`app.serpapi.synthetic`).
+    """
+
+    def __init__(self, version: str = "v1", root: Path = FIXTURES_DIR) -> None:
+        super().__init__(version, root)
+        self.generated_requests: set[str] = set()
+        self._lock = threading.Lock()
+
+    def lookup(self, engine: str, params: dict[str, Any]) -> dict[str, Any] | None:
+        recorded = super().lookup(engine, params)
+        if recorded is not None:
+            return recorded
+        from app.serpapi.synthetic import synthesize  # local import avoids a circular import
+
+        data = synthesize(engine, params)
+        if data is not None:
+            with self._lock:
+                self.generated_requests.add(cache_key(engine, params))
+        return data
+
+
 EventCallback = Callable[[str, SearchOutcome], None]
 PersistCallback = Callable[[SearchOutcome], None]
 

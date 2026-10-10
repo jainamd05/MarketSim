@@ -121,7 +121,7 @@ export function LandingPage() {
               </Button>
             </div>
             <p className="mt-3 text-xs text-ink-3">
-              Demo mode replays saved SerpApi-format fixtures with fictional brands. {config?.live_available
+              Demo mode replays saved SerpApi-format fixtures for the demonstration profile and fills any other profile with deterministic synthetic responses – fictional brands, never real-time data. {config?.live_available
                 ? "A SerpApi key is configured, so you can switch to live data on the review screen."
                 : "Add SERPAPI_API_KEY to run the same workflow on live data."}
             </p>

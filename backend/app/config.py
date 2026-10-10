@@ -34,6 +34,10 @@ class Settings(BaseSettings):
     serpapi_max_retries: int = Field(default=3, ge=0, le=6)
     serpapi_backoff_base_seconds: float = Field(default=0.75, ge=0)
     fixture_version: str = "v1"
+    # DEMO mode only: when a request has no recorded fixture, generate a deterministic
+    # synthetic payload so any questionnaire answer still produces a populated demo run.
+    # Set to false to restore the old "honest degradation" (fixture_missing) behaviour.
+    demo_synthetic_fallback: bool = True
 
     llm_provider: LLMProvider = "none"
     llm_model: str | None = None

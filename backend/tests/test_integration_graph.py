@@ -94,24 +94,46 @@ def test_report_is_reproducible_from_stored_inputs(client):
     assert ra["content_hash"] == rb["content_hash"]
 
 
-def test_physical_profile_routes_to_maps_and_degrades_honestly(client):
+def test_physical_profile_routes_to_maps_with_synthetic_demo_data(client):
     profile = dict(business_type="physical", business_stage="new", category="food_beverages", subcategory="coffee_tea",
                    pilot_country="IN", city="Mumbai", sales_channel="high_street", sourcing_model="resell",
                    budget_band="5l_10l", primary_goal="competitor_intelligence", exact_capital_inr=800_000)
     aid = run_demo(client, profile)
     st = client.get(f"/api/analyses/{aid}").json()
-    assert st["status"] == "partial", "no fixtures exist for this profile – must not pretend success"
+    assert st["status"] == "completed", "DEMO mode now synthesises data for any profile"
     ev = events(client, aid)
     assert any(e["event_type"] == "route_selected" and e["meta"]["branch"] == "physical" for e in ev)
-    maps_events = [e for e in ev if e["meta"].get("engine") == "google_maps" and e["event_type"] == "tool_failed"]
-    assert maps_events and maps_events[0]["meta"]["status"] == "fixture_missing"
     strategies = client.get(f"/api/analyses/{aid}/strategies").json()["strategies"]
     assert len(strategies) == 3 and all(s["sim_inputs"]["model"] == "physical" for s in strategies)
     report = client.get(f"/api/analyses/{aid}/report").json()["report"]
-    assert report["status"] == "partial"
+    assert report["status"] == "completed"
     engines = {c["engine"] for c in report["citations"]}
-    assert "google_maps" not in engines, "missing Maps fixtures must not produce cited local competitors"
-    assert engines <= {"google_shopping"}, "only the online price benchmark (which has a fixture) is cited"
+    assert "google_maps" in engines, "synthetic Maps data must back local competitors"
+    assert report["citations"] and all(c["data_origin"] == "demo_fixture" for c in report["citations"])
+
+
+def test_physical_profile_degrades_honestly_when_synthetic_fallback_disabled(tmp_path):
+    settings = make_settings(tmp_path, demo_synthetic_fallback=False)
+    database = Database(settings.resolved_database_url)
+    database.create_all()
+    app = create_app(settings, db=database)
+    profile = dict(business_type="physical", business_stage="new", category="food_beverages", subcategory="coffee_tea",
+                   pilot_country="IN", city="Mumbai", sales_channel="high_street", sourcing_model="resell",
+                   budget_band="5l_10l", primary_goal="competitor_intelligence", exact_capital_inr=800_000)
+    try:
+        with TestClient(app) as c:
+            aid = run_demo(c, profile)
+            st = c.get(f"/api/analyses/{aid}").json()
+            assert st["status"] == "partial", "with synthesis off, missing fixtures must not pretend success"
+            ev = events(c, aid)
+            maps_events = [e for e in ev if e["meta"].get("engine") == "google_maps" and e["event_type"] == "tool_failed"]
+            assert maps_events and maps_events[0]["meta"]["status"] == "fixture_missing"
+            report = c.get(f"/api/analyses/{aid}/report").json()["report"]
+            assert report["status"] == "partial"
+            engines = {x["engine"] for x in report["citations"]}
+            assert "google_maps" not in engines, "missing Maps fixtures must not produce cited local competitors"
+    finally:
+        database.dispose()
 
 
 def test_bounded_retries_stop_after_two_revisions(client):

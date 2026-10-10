@@ -32,9 +32,16 @@ the data is synthetic.
   demo runs are reproducible and never appear "current".
 - The manifest is marked `"synthetic": true`.
 
-Fixture lookup is keyed by the canonical (engine, parameters) hash. Only the demonstration profile's requests exist,
-so any other profile in demo mode reports `fixture_missing` for those searches and finishes as **partial** – it does
-not borrow unrelated data.
+Fixture lookup is keyed by the canonical (engine, parameters) hash. **Recorded fixtures are always preferred.** When
+a request has no recorded fixture (i.e. any profile other than the demonstration profile), the gateway synthesises a
+deterministic SerpApi-shaped response on demand (`app/serpapi/synthetic.py`) so the form is truly form-driven and any
+questionnaire answer produces a populated demo run:
+
+- synthetic payloads carry `search_metadata.synthetic_generated = true` and use fictional `.example` brands;
+- they are deterministic (the same request always yields the same payload), keeping demo reports reproducible;
+- they are labelled like every other demo response (`origin: demo_fixture`, **Demo data**);
+- set `DEMO_SYNTHETIC_FALLBACK=false` to disable this and restore the older behaviour, where a request with no
+  recorded fixture reports `fixture_missing` and the analysis finishes as **partial** rather than borrowing data.
 
 ## Reproducibility
 

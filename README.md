@@ -14,9 +14,10 @@ Questionnaire → BusinessProfile → Supervisor (plan + budget) ─┬─ onlin
    → Pricing intelligence → Demand & trends → News & risk → 3 strategies → Simulation → Critic ⟲ (≤2 revisions) → Report → Dashboard
 ```
 
-> **Runs with zero API keys.** Without `SERPAPI_API_KEY` the app starts in clearly-labelled **DEMO** mode and
-> replays saved, synthetic SerpApi-format fixtures (fictional brands). With a key it makes genuine requests
-> and reports failures honestly – it never silently substitutes demo data.
+> **Runs with zero API keys.** Without `SERPAPI_API_KEY` the app starts in clearly-labelled **DEMO** mode. It replays
+> saved, synthetic SerpApi-format fixtures for the demonstration profile and fills any other profile with deterministic
+> synthetic responses (fictional brands), so the questionnaire is genuinely form-driven. With a key it makes genuine
+> requests and reports failures honestly – it never silently substitutes demo data for a live failure.
 
 ---
 
@@ -100,7 +101,7 @@ narrative and bounded assumptions; output is validated against Pydantic schemas,
 ## Running tests
 
 ```bash
-# Backend – 97 tests (pytest + FastAPI TestClient; no network: fixtures + httpx.MockTransport)
+# Backend – 101 tests (pytest + FastAPI TestClient; no network: fixtures + httpx.MockTransport)
 cd backend
 .venv/bin/python -m pytest          # Windows: .venv\Scripts\python -m pytest
 
@@ -170,9 +171,11 @@ docs/                        architecture, SerpApi, demo mode, hackathon
 
 ## Known limitations
 
-- **Demo fixtures are synthetic.** They follow SerpApi's response shapes but use fictional brands and `.example`
-  URLs; they demonstrate the workflow, not the Indian food market. Only the demonstration profile has fixtures – other
-  profiles run in demo mode in a clearly *partial* state (`fixture_missing`), by design.
+- **Demo fixtures are synthetic.** The saved fixtures and the on-demand synthetic responses follow SerpApi's response
+  shapes but use fictional brands and `.example` URLs; they demonstrate the workflow, not the Indian food market. The
+  demonstration profile replays saved fixtures; any other profile is filled in with deterministic synthetic responses
+  so the form always produces a populated result (set `DEMO_SYNTHETIC_FALLBACK=false` to restore the older behaviour,
+  where profile-specific misses report `fixture_missing` and the run finishes *partial*).
 - **Live mode is implemented and tested against mocked transports, but was not verified against the real SerpApi
   service during development** (no key was available). Field names follow SerpApi's documentation and are parsed
   defensively; Google Shopping layouts change, and the `google_immersive_product` fallback exists for results without `product_id`.
