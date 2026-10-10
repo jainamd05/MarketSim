@@ -1,0 +1,157 @@
+{
+  "search_metadata": {
+    "id": "fixture-shop-honey",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data.",
+    "google_shopping_url": "https://www.google.co.in/search?tbm=shop"
+  },
+  "search_parameters": {
+    "engine": "google_shopping",
+    "q": "organic honey 500g",
+    "gl": "in",
+    "hl": "en"
+  },
+  "shopping_results": [
+    {
+      "position": 1,
+      "title": "Wildbloom Honey Raw Forest Honey 500g",
+      "source": "Wildbloom Honey",
+      "price": "₹549.00",
+      "extracted_price": 549.0,
+      "rating": 4.5,
+      "reviews": 760,
+      "delivery": "Free delivery",
+      "product_link": "https://wildbloomhoney.example/p/1",
+      "thumbnail": "https://images.example/thumb.png",
+      "product_id": "7400300000000000301"
+    },
+    {
+      "position": 2,
+      "title": "Himalayan Hive Multiflora Honey 1kg",
+      "source": "BigBasket",
+      "price": "₹699.00",
+      "extracted_price": 699.0,
+      "rating": 4.3,
+      "reviews": 1430,
+      "delivery": "Free delivery",
+      "product_link": "https://bigbasket.example/p/2",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 3,
+      "title": "Pantry Atelier Wild Thyme Honey 250g",
+      "source": "Pantry Atelier",
+      "price": "₹650.00",
+      "extracted_price": 650.0,
+      "rating": 4.7,
+      "reviews": 88,
+      "delivery": "Free delivery",
+      "product_link": "https://pantryatelier.example/p/3",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 4,
+      "title": "Forest Gold Organic Honey 500g",
+      "source": "Forest Gold",
+      "price": "₹299.00",
+      "extracted_price": 299.0,
+      "rating": 4.1,
+      "reviews": 2210,
+      "delivery": "Free delivery",
+      "product_link": "https://forestgold.example/p/4",
+      "thumbnail": "https://images.example/thumb.png",
+      "old_price": "₹399.00",
+      "extracted_old_price": 399.0,
+      "extensions": [
+        "25% off"
+      ]
+    },
+    {
+      "position": 5,
+      "title": "Nectar & Co. Acacia Honey 500 g",
+      "source": "Nectar & Co.",
+      "price": "₹799.00",
+      "extracted_price": 799.0,
+      "rating": 4.6,
+      "reviews": 240,
+      "delivery": "Free delivery",
+      "product_link": "https://nectarandco.example/p/5",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 6,
+      "title": "BeeKind Organics Raw Honey 500g",
+      "source": "BeeKind Organics",
+      "price": "₹475.00",
+      "extracted_price": 475.0,
+      "rating": 4.4,
+      "reviews": 530,
+      "delivery": "Free delivery",
+      "product_link": "https://beekindorganics.example/p/6",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 7,
+      "title": "Himalayan Hive Honey Combo 500g + 250g",
+      "source": "Himalayan Hive",
+      "price": "₹599.00",
+      "extracted_price": 599.0,
+      "rating": 4.2,
+      "reviews": 60,
+      "delivery": "Free delivery",
+      "product_link": "https://himalayanhive.example/p/7",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 8,
+      "title": "Wildbloom Honey Gift Box 3 x 250g",
+      "source": "Wildbloom Honey",
+      "price": "₹1,250.00",
+      "extracted_price": 1250.0,
+      "rating": 4.8,
+      "reviews": 45,
+      "delivery": "Free delivery",
+      "product_link": "https://wildbloomhoney.example/p/8",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 9,
+      "title": "Forest Gold Honey 1 kg",
+      "source": "JioMart",
+      "price": "1,050",
+      "extracted_price": 1050.0,
+      "rating": 4.0,
+      "reviews": 300,
+      "delivery": "Free delivery",
+      "product_link": "https://jiomart.example/p/9",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 10,
+      "title": "Pantry Atelier Single Estate Honey 350g",
+      "source": "Pantry Atelier",
+      "price": "₹1,190.00",
+      "extracted_price": 1190.0,
+      "rating": 4.6,
+      "reviews": 70,
+      "delivery": "Free delivery",
+      "product_link": "https://pantryatelier.example/p/10",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 11,
+      "title": "Nectar & Co. Rare Jamun Honey 250g",
+      "source": "Nectar & Co.",
+      "price": "₹1,390.00",
+      "extracted_price": 1390.0,
+      "rating": 4.7,
+      "reviews": 52,
+      "delivery": "Free delivery",
+      "product_link": "https://nectarandco.example/p/11",
+      "thumbnail": "https://images.example/thumb.png"
+    }
+  ]
+}

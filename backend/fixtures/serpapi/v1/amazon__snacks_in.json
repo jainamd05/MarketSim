@@ -1,0 +1,109 @@
+{
+  "search_metadata": {
+    "id": "fixture-amazon-snacks",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "amazon",
+    "k": "healthy snacks pack",
+    "amazon_domain": "amazon.in"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "asin": "B0DEMO0001",
+      "title": "Crunch Theory Roasted Makhana Cream & Onion 4 x 30g",
+      "brand": "Crunch Theory",
+      "link_clean": "https://amazon-in.example/dp/B0DEMO0001",
+      "price": "₹189",
+      "extracted_price": 189.0,
+      "rating": 4.3,
+      "reviews": 5120,
+      "sponsored": true,
+      "delivery": [
+        "FREE delivery Tue, 6 Oct"
+      ]
+    },
+    {
+      "position": 2,
+      "asin": "B0DEMO0002",
+      "title": "Makhana Mill Pudina Makhana 80g",
+      "brand": "Makhana Mill",
+      "link_clean": "https://amazon-in.example/dp/B0DEMO0002",
+      "price": "₹139",
+      "extracted_price": 139.0,
+      "rating": 4.1,
+      "reviews": 1840,
+      "sponsored": false,
+      "delivery": [
+        "FREE delivery Tue, 6 Oct"
+      ]
+    },
+    {
+      "position": 3,
+      "asin": "B0DEMO0003",
+      "title": "Healthy Snack Combo Pack of 5 Assorted",
+      "brand": null,
+      "link_clean": "https://amazon-in.example/dp/B0DEMO0003",
+      "price": "₹499",
+      "extracted_price": 499.0,
+      "rating": 3.9,
+      "reviews": 260,
+      "sponsored": false,
+      "delivery": [
+        "FREE delivery Tue, 6 Oct"
+      ],
+      "old_price": "₹649",
+      "extracted_old_price": 649.0
+    },
+    {
+      "position": 4,
+      "asin": "B0DEMO0004",
+      "title": "Trailblaze Foods Cranberry Trail Mix 200g",
+      "brand": "Trailblaze Foods",
+      "link_clean": "https://amazon-in.example/dp/B0DEMO0004",
+      "price": "₹225",
+      "extracted_price": 225.0,
+      "rating": 4.4,
+      "reviews": 980,
+      "sponsored": false,
+      "delivery": [
+        "FREE delivery Tue, 6 Oct"
+      ]
+    },
+    {
+      "position": 5,
+      "asin": "B0DEMO0005",
+      "title": "Peppy Pulses Masala Chana 150g",
+      "brand": "Peppy Pulses",
+      "link_clean": "https://amazon-in.example/dp/B0DEMO0005",
+      "price": "₹99",
+      "extracted_price": 99.0,
+      "rating": 4.0,
+      "reviews": 720,
+      "sponsored": false,
+      "delivery": [
+        "FREE delivery Tue, 6 Oct"
+      ]
+    },
+    {
+      "position": 6,
+      "asin": "B0DEMO0006",
+      "title": "Little Millet Co. Ragi Puffs 100g",
+      "brand": null,
+      "link_clean": "https://amazon-in.example/dp/B0DEMO0006",
+      "price": "₹125",
+      "extracted_price": 125.0,
+      "rating": 4.0,
+      "reviews": 95,
+      "sponsored": false,
+      "delivery": [
+        "FREE delivery Tue, 6 Oct"
+      ]
+    }
+  ]
+}

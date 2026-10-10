@@ -1,0 +1,100 @@
+{
+  "search_metadata": {
+    "id": "fixture-product-7400100000000000101",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google_product",
+    "product_id": "7400100000000000101",
+    "offer_view": "true",
+    "gl": "in",
+    "hl": "en"
+  },
+  "product_results": {
+    "product_id": "7400100000000000101",
+    "title": "Crunch Theory Roasted Makhana Peri Peri 4 x 30g",
+    "brand": "Crunch Theory",
+    "prices": [
+      "₹199"
+    ],
+    "typical_prices": {
+      "low": "₹179",
+      "high": "₹222",
+      "shown_price": "₹199 at Crunch Theory"
+    },
+    "rating": 4.4,
+    "reviews": 2310,
+    "description": "Roasted fox nuts, 4 single-serve packs.",
+    "extensions": [
+      "Vegetarian",
+      "Shelf life: 6 months"
+    ]
+  },
+  "sellers_results": {
+    "online_sellers": [
+      {
+        "position": 1,
+        "name": "Crunch Theory",
+        "link": "https://crunchtheory.example/item",
+        "base_price": "₹199.00",
+        "total_price": "₹199.00",
+        "additional_price": {
+          "shipping": "Free"
+        }
+      },
+      {
+        "position": 2,
+        "name": "Amazon.in",
+        "link": "https://amazonin.example/item",
+        "base_price": "₹189.00",
+        "total_price": "₹189.00",
+        "additional_price": {
+          "shipping": "Free"
+        }
+      },
+      {
+        "position": 3,
+        "name": "BigBasket",
+        "link": "https://bigbasket.example/item",
+        "base_price": "₹205.00",
+        "total_price": "₹235.00",
+        "additional_price": {
+          "shipping": "₹30.00"
+        }
+      }
+    ]
+  },
+  "specs_results": {
+    "Brand": "Crunch Theory",
+    "Form": "Whole",
+    "Diet type": "Vegetarian"
+  },
+  "reviews_results": {
+    "ratings": [
+      {
+        "stars": 5,
+        "amount": 1432
+      },
+      {
+        "stars": 4,
+        "amount": 554
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Fresh and well packed",
+        "rating": 5,
+        "source": "Demo reviewer"
+      },
+      {
+        "title": "Good but pricey",
+        "rating": 4,
+        "source": "Demo reviewer"
+      }
+    ]
+  }
+}

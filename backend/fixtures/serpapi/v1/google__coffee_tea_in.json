@@ -1,0 +1,82 @@
+{
+  "search_metadata": {
+    "id": "fixture-web-coffee_tea",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "specialty coffee brands India",
+    "gl": "in",
+    "hl": "en"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Kaapi Trail | Specialty Coffee Roasters – Fresh Coffee Beans",
+      "link": "https://kaapitrail.example/",
+      "displayed_link": "kaapitrail.example",
+      "snippet": "Estate coffee beans roasted to order and shipped across India.",
+      "source": "Kaapi Trail"
+    },
+    {
+      "position": 2,
+      "title": "Blue Hills Roasters – Single Origin Coffee from Indian Estates",
+      "link": "https://bluehillsroasters.example/",
+      "displayed_link": "bluehillsroasters.example",
+      "snippet": "Single origin specialty coffee, whole bean or ground.",
+      "source": "Blue Hills Roasters"
+    },
+    {
+      "position": 3,
+      "title": "Top 15 Specialty Coffee Brands in India (2026 Guide)",
+      "link": "https://foodjournal.example/specialty-coffee-brands",
+      "displayed_link": "foodjournal.example",
+      "snippet": "Our guide to specialty coffee brands worth trying.",
+      "source": "Food Journal"
+    },
+    {
+      "position": 4,
+      "title": "Monsoon Bean Co. – Shop Coffee",
+      "link": "https://monsoonbean.example/shop",
+      "displayed_link": "monsoonbean.example",
+      "snippet": "Monsooned Malabar and estate coffee beans.",
+      "source": "Monsoon Bean Co."
+    },
+    {
+      "position": 5,
+      "title": "Third Crack Coffee — Roastery & Coffee Subscriptions",
+      "link": "https://thirdcrackcoffee.example/",
+      "displayed_link": "thirdcrackcoffee.example",
+      "snippet": "Coffee subscriptions delivered every month.",
+      "source": "Third Crack Coffee"
+    },
+    {
+      "position": 6,
+      "title": "Buy Coffee Beans Online",
+      "link": "https://www.amazon.in/s?k=coffee+beans",
+      "displayed_link": "www.amazon.in",
+      "snippet": "Shop coffee beans on Amazon.in.",
+      "source": "Amazon.in"
+    },
+    {
+      "position": 7,
+      "title": "Specialty coffee in India: market overview",
+      "link": "https://dailycommercewire.example/coffee-market-overview",
+      "displayed_link": "dailycommercewire.example",
+      "snippet": "How the coffee segment is evolving.",
+      "source": "Daily Commerce Wire"
+    },
+    {
+      "position": 8,
+      "title": "Estate Brew Coffee Co. – Filter Coffee Beans",
+      "link": "https://estatebrew.example/",
+      "displayed_link": "estatebrew.example",
+      "snippet": "Filter coffee beans and blends.",
+      "source": "Estate Brew"
+    }
+  ]
+}

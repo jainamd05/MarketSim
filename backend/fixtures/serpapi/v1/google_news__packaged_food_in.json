@@ -1,0 +1,108 @@
+{
+  "search_metadata": {
+    "id": "fixture-news-food-in",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google_news",
+    "q": "packaged food brands India",
+    "gl": "in",
+    "hl": "en"
+  },
+  "news_results": [
+    {
+      "position": 1,
+      "title": "Crunch Theory launches baked makhana range in 40 cities",
+      "source": {
+        "name": "Daily Commerce Wire",
+        "icon": "https://icons.example/x.png"
+      },
+      "link": "https://dailycommercewire.example/article/1",
+      "date": "09/22/2026, 07:00 AM, +0000 UTC",
+      "snippet": "The snack brand introduced three new flavours for quick-commerce channels."
+    },
+    {
+      "position": 2,
+      "title": "Coffee bean prices climb as harvest shortfall tightens supply",
+      "source": {
+        "name": "Agri Markets Today",
+        "icon": "https://icons.example/x.png"
+      },
+      "link": "https://agrimarketstoday.example/article/2",
+      "date": "09/15/2026, 09:30 AM, +0000 UTC",
+      "snippet": "Exporters report higher green coffee costs after an uneven monsoon.",
+      "stories": [
+        {
+          "position": 8,
+          "title": "Green coffee import duty review under discussion",
+          "source": {
+            "name": "Policy Desk Daily",
+            "icon": "https://icons.example/x.png"
+          },
+          "link": "https://policydeskdaily.example/article/8",
+          "date": "09/10/2026, 07:45 AM, +0000 UTC",
+          "snippet": "Industry groups seek a review of duties."
+        }
+      ]
+    },
+    {
+      "position": 3,
+      "title": "Kaapi Trail raises seed funding to expand roasting capacity",
+      "source": {
+        "name": "Startup Ledger",
+        "icon": "https://icons.example/x.png"
+      },
+      "link": "https://startupledger.example/article/3",
+      "date": "09/03/2026, 11:00 AM, +0000 UTC",
+      "snippet": "The specialty roaster will add a second roasting unit."
+    },
+    {
+      "position": 4,
+      "title": "Regulator proposes stricter front-of-pack labelling for packaged foods",
+      "source": {
+        "name": "Policy Desk Daily",
+        "icon": "https://icons.example/x.png"
+      },
+      "link": "https://policydeskdaily.example/article/4",
+      "date": "08/27/2026, 06:15 AM, +0000 UTC",
+      "snippet": "Draft rules would require clearer nutrition labels on packaged snacks."
+    },
+    {
+      "position": 5,
+      "title": "D2C food brands could see higher ad costs this festive season, analysts say",
+      "source": {
+        "name": "Daily Commerce Wire",
+        "icon": "https://icons.example/x.png"
+      },
+      "link": "https://dailycommercewire.example/article/5",
+      "date": "08/18/2026, 08:00 AM, +0000 UTC",
+      "snippet": "Analysts expect competition for festive-season advertising."
+    },
+    {
+      "position": 6,
+      "title": "Wildbloom Honey introduces glass-jar gift boxes",
+      "source": {
+        "name": "Retail Pulse",
+        "icon": "https://icons.example/x.png"
+      },
+      "link": "https://retailpulse.example/article/6",
+      "date": "08/02/2026, 10:00 AM, +0000 UTC",
+      "snippet": "The honey brand unveiled gift packaging for corporate orders."
+    },
+    {
+      "position": 7,
+      "title": "Honey adulteration tests: what buyers should know",
+      "source": {
+        "name": "Consumer Watch",
+        "icon": "https://icons.example/x.png"
+      },
+      "link": "https://consumerwatch.example/article/7",
+      "date": "01/12/2026, 05:00 AM, +0000 UTC",
+      "snippet": "An explainer on purity testing for honey."
+    }
+  ]
+}

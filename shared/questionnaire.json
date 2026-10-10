@@ -1,0 +1,233 @@
+{
+  "version": "1.0.0",
+  "notes": "Configuration-driven onboarding registry. Both the FastAPI backend (GET /api/onboarding/questions, research planning) and the React wizard read this file. Add categories, sub-categories, markets or fields here without changing wizard code.",
+  "business_types": [
+    {
+      "value": "online",
+      "label": "Online e-commerce business",
+      "description": "Sell through your own website, marketplaces, or both.",
+      "enabled": true
+    },
+    {
+      "value": "physical",
+      "label": "Physical retail shop",
+      "description": "A shop or local retail outlet serving walk-in customers.",
+      "enabled": true
+    },
+    {
+      "value": "hybrid",
+      "label": "Hybrid (online + physical)",
+      "description": "Reserved for a later release.",
+      "enabled": false
+    }
+  ],
+  "business_stages": [
+    { "value": "new", "label": "Planning a new business", "description": "Pre-launch viability and competitor research." },
+    { "value": "existing", "label": "Already running a business", "description": "Benchmark and improve an operating business." }
+  ],
+  "categories": [
+    {
+      "value": "food_beverages",
+      "label": "Food & Beverages",
+      "terms": { "trend": "packaged food", "brand": "packaged food brands" },
+      "risk_flags": ["perishability", "packaging", "shelf_life", "import_export", "labeling", "food_safety_licence"],
+      "shopping_meaningful_for_physical": true,
+      "subcategories": [
+        {
+          "value": "packaged_snacks",
+          "label": "Packaged snacks",
+          "unit_basis": "g",
+          "terms": { "product": "healthy snacks pack", "trend": "healthy snacks", "brand": "healthy snack brands", "store": "snack shop", "news": "healthy snacks brand" }
+        },
+        {
+          "value": "coffee_tea",
+          "label": "Coffee and tea",
+          "unit_basis": "g",
+          "terms": { "product": "roasted coffee beans 250g", "trend": "coffee beans", "brand": "specialty coffee brands", "store": "coffee roaster", "news": "specialty coffee brand" }
+        },
+        {
+          "value": "beverage_mixes",
+          "label": "Beverage mixes",
+          "unit_basis": "g",
+          "terms": { "product": "instant beverage mix", "trend": "drink mix", "brand": "beverage mix brands", "store": "health drinks store", "news": "beverage mix brand" }
+        },
+        {
+          "value": "premium_pantry",
+          "label": "Premium pantry products",
+          "unit_basis": "g",
+          "terms": { "product": "organic honey 500g", "trend": "organic honey", "brand": "gourmet pantry brands", "store": "gourmet grocery store", "news": "gourmet food brand" }
+        }
+      ]
+    },
+    {
+      "value": "electronics_gaming",
+      "label": "Electronics & Gaming",
+      "terms": { "trend": "gaming accessories", "brand": "electronics accessories brands" },
+      "risk_flags": ["product_certification", "warranty_returns", "import_export", "battery_shipping"],
+      "shopping_meaningful_for_physical": true,
+      "subcategories": [
+        { "value": "phone_accessories", "label": "Phone accessories", "unit_basis": "count", "terms": { "product": "phone case", "trend": "phone case", "brand": "phone accessories brands", "store": "mobile accessories shop", "news": "phone accessories brand" } },
+        { "value": "gaming_accessories", "label": "Gaming accessories", "unit_basis": "count", "terms": { "product": "gaming headset", "trend": "gaming headset", "brand": "gaming accessories brands", "store": "gaming store", "news": "gaming accessories launch" } },
+        { "value": "audio", "label": "Audio devices", "unit_basis": "count", "terms": { "product": "wireless earbuds", "trend": "wireless earbuds", "brand": "earbuds brands", "store": "electronics store", "news": "earbuds launch" } },
+        { "value": "smart_home", "label": "Smart home devices", "unit_basis": "count", "terms": { "product": "smart plug", "trend": "smart plug", "brand": "smart home brands", "store": "electronics store", "news": "smart home device launch" } }
+      ]
+    },
+    {
+      "value": "clothing_fashion",
+      "label": "Clothing & Fashion",
+      "terms": { "trend": "online fashion", "brand": "fashion brands" },
+      "risk_flags": ["sizing_returns", "seasonality", "inventory_obsolescence"],
+      "shopping_meaningful_for_physical": true,
+      "subcategories": [
+        { "value": "ethnic_wear", "label": "Ethnic wear", "unit_basis": "count", "terms": { "product": "cotton kurta", "trend": "kurta", "brand": "ethnic wear brands", "store": "ethnic wear store", "news": "ethnic wear brand" } },
+        { "value": "streetwear", "label": "Streetwear", "unit_basis": "count", "terms": { "product": "oversized t-shirt", "trend": "oversized t shirt", "brand": "streetwear brands", "store": "streetwear store", "news": "streetwear brand" } },
+        { "value": "activewear", "label": "Activewear", "unit_basis": "count", "terms": { "product": "gym leggings", "trend": "activewear", "brand": "activewear brands", "store": "sportswear store", "news": "activewear brand" } },
+        { "value": "footwear", "label": "Footwear", "unit_basis": "count", "terms": { "product": "casual sneakers", "trend": "sneakers", "brand": "sneaker brands", "store": "shoe store", "news": "sneaker brand" } }
+      ]
+    },
+    {
+      "value": "beauty_personal_care",
+      "label": "Beauty & Personal Care",
+      "terms": { "trend": "skincare", "brand": "beauty brands" },
+      "risk_flags": ["ingredient_labeling", "cosmetics_regulation", "shelf_life", "claims_substantiation"],
+      "shopping_meaningful_for_physical": true,
+      "subcategories": [
+        { "value": "skincare", "label": "Skincare", "unit_basis": "ml", "terms": { "product": "face serum 30ml", "trend": "face serum", "brand": "skincare brands", "store": "cosmetics store", "news": "skincare brand" } },
+        { "value": "haircare", "label": "Haircare", "unit_basis": "ml", "terms": { "product": "hair oil 200ml", "trend": "hair oil", "brand": "haircare brands", "store": "beauty store", "news": "haircare brand" } },
+        { "value": "fragrances", "label": "Fragrances", "unit_basis": "ml", "terms": { "product": "eau de parfum 100ml", "trend": "perfume", "brand": "perfume brands", "store": "perfume shop", "news": "fragrance brand" } },
+        { "value": "mens_grooming", "label": "Men's grooming", "unit_basis": "ml", "terms": { "product": "beard oil", "trend": "beard oil", "brand": "men grooming brands", "store": "grooming store", "news": "men's grooming brand" } }
+      ]
+    },
+    {
+      "value": "home_lifestyle",
+      "label": "Home & Lifestyle",
+      "terms": { "trend": "home decor", "brand": "home decor brands" },
+      "risk_flags": ["breakage_in_transit", "bulky_shipping", "inventory_obsolescence"],
+      "shopping_meaningful_for_physical": true,
+      "subcategories": [
+        { "value": "home_decor", "label": "Home decor", "unit_basis": "count", "terms": { "product": "ceramic vase", "trend": "home decor", "brand": "home decor brands", "store": "home decor store", "news": "home decor brand" } },
+        { "value": "kitchenware", "label": "Kitchenware", "unit_basis": "count", "terms": { "product": "cast iron pan", "trend": "cast iron pan", "brand": "kitchenware brands", "store": "kitchenware store", "news": "kitchenware brand" } },
+        { "value": "bedding", "label": "Bedding & linen", "unit_basis": "count", "terms": { "product": "cotton bedsheet", "trend": "bedsheet", "brand": "bedding brands", "store": "home linen store", "news": "bedding brand" } },
+        { "value": "candles_aroma", "label": "Candles & aroma", "unit_basis": "g", "terms": { "product": "scented candle", "trend": "scented candles", "brand": "candle brands", "store": "candle shop", "news": "candle brand" } }
+      ]
+    },
+    {
+      "value": "health_wellness",
+      "label": "Health & Wellness Products",
+      "terms": { "trend": "supplements", "brand": "wellness brands" },
+      "risk_flags": ["health_claims", "supplement_regulation", "shelf_life", "labeling"],
+      "shopping_meaningful_for_physical": true,
+      "subcategories": [
+        { "value": "supplements", "label": "Vitamins & supplements", "unit_basis": "count", "terms": { "product": "multivitamin tablets", "trend": "multivitamin", "brand": "supplement brands", "store": "nutrition store", "news": "supplement brand" } },
+        { "value": "protein_nutrition", "label": "Protein & sports nutrition", "unit_basis": "g", "terms": { "product": "whey protein 1kg", "trend": "whey protein", "brand": "protein brands", "store": "sports nutrition store", "news": "protein brand" } },
+        { "value": "herbal_wellness", "label": "Herbal & ayurvedic wellness", "unit_basis": "g", "terms": { "product": "ashwagandha capsules", "trend": "ashwagandha", "brand": "ayurvedic brands", "store": "ayurvedic store", "news": "ayurvedic wellness brand" } },
+        { "value": "fitness_equipment", "label": "Home fitness equipment", "unit_basis": "count", "terms": { "product": "resistance bands", "trend": "resistance bands", "brand": "fitness equipment brands", "store": "fitness equipment store", "news": "fitness equipment brand" } }
+      ]
+    }
+  ],
+  "category_special_options": [
+    { "value": "other", "label": "Other", "description": "Describe your category in your own words." },
+    { "value": "undecided", "label": "Undecided", "description": "Compare category-level opportunity signals instead of guessing the best business." }
+  ],
+  "focus_special_options": [
+    { "value": "other", "label": "Other", "description": "Describe your product focus." },
+    { "value": "undecided", "label": "Undecided", "description": "Compare up to three product focuses side by side." }
+  ],
+  "limits": {
+    "max_compare_focuses": 3,
+    "max_compare_categories": 3,
+    "max_pilot_markets": 2
+  },
+  "markets": [
+    { "code": "IN", "label": "India", "currency": "INR", "gl": "in", "hl": "en", "trends_geo": "IN", "google_domain": "google.co.in", "amazon_domain": "amazon.in" },
+    { "code": "US", "label": "United States", "currency": "USD", "gl": "us", "hl": "en", "trends_geo": "US", "google_domain": "google.com", "amazon_domain": "amazon.com" },
+    { "code": "GB", "label": "United Kingdom", "currency": "GBP", "gl": "uk", "hl": "en", "trends_geo": "GB", "google_domain": "google.co.uk", "amazon_domain": "amazon.co.uk" },
+    { "code": "AE", "label": "United Arab Emirates", "currency": "AED", "gl": "ae", "hl": "en", "trends_geo": "AE", "google_domain": "google.ae", "amazon_domain": "amazon.ae" }
+  ],
+  "market_modes": {
+    "online": [
+      { "value": "single", "label": "Single country", "description": "India, United States, United Kingdom or UAE." },
+      { "value": "compare", "label": "Compare selected countries", "description": "Compare up to two pilot markets within the search budget." },
+      { "value": "other", "label": "Other country", "description": "Enter an ISO country code." }
+    ]
+  },
+  "sales_channels": {
+    "online": [
+      { "value": "own_website", "label": "Own website" },
+      { "value": "marketplaces", "label": "Online marketplaces" },
+      { "value": "website_and_marketplaces", "label": "Both (own website + marketplaces)" },
+      { "value": "help_me_decide", "label": "Help me decide" }
+    ],
+    "physical": [
+      { "value": "shopping_mall", "label": "Shopping mall" },
+      { "value": "high_street", "label": "High street / commercial market" },
+      { "value": "residential", "label": "Residential neighbourhood" },
+      { "value": "help_me_decide", "label": "Help me decide" }
+    ]
+  },
+  "budget_bands": [
+    { "value": "below_50k", "label": "Below ₹50,000", "min_inr": 0, "max_inr": 50000 },
+    { "value": "50k_2l", "label": "₹50,000–₹2 lakh", "min_inr": 50000, "max_inr": 200000 },
+    { "value": "2l_5l", "label": "₹2–5 lakh", "min_inr": 200000, "max_inr": 500000 },
+    { "value": "5l_10l", "label": "₹5–10 lakh", "min_inr": 500000, "max_inr": 1000000 },
+    { "value": "above_10l", "label": "Above ₹10 lakh", "min_inr": 1000000, "max_inr": null },
+    { "value": "undecided", "label": "Undecided", "min_inr": null, "max_inr": null }
+  ],
+  "operating_fields": {
+    "online": [
+      { "key": "monthly_ad_budget_inr", "label": "Monthly advertising budget", "unit": "INR / month", "required": false, "primary": true },
+      { "key": "shipping_cost", "label": "Estimated shipping cost per order", "unit": "INR / order", "required": false },
+      { "key": "website_platform_cost_inr", "label": "Website / platform expenses", "unit": "INR / month", "required": false },
+      { "key": "product_unit_cost", "label": "Product sourcing cost per unit", "unit": "INR / unit", "required": false }
+    ],
+    "physical": [
+      { "key": "monthly_rent_inr", "label": "Monthly rent", "unit": "INR / month", "required": false, "primary": true },
+      { "key": "monthly_staff_cost_inr", "label": "Staff expenses", "unit": "INR / month", "required": false },
+      { "key": "monthly_utilities_inr", "label": "Utilities", "unit": "INR / month", "required": false },
+      { "key": "monthly_marketing_budget_inr", "label": "Marketing budget", "unit": "INR / month", "required": false }
+    ]
+  },
+  "sourcing_models": [
+    { "value": "manufacture", "label": "Manufacture own products", "applies_to": ["online", "physical"] },
+    { "value": "private_label", "label": "Private-label manufacturing", "applies_to": ["online", "physical"] },
+    { "value": "resell", "label": "Resell existing products", "applies_to": ["online", "physical"] },
+    { "value": "dropshipping", "label": "Dropshipping", "applies_to": ["online"] },
+    { "value": "undecided", "label": "Undecided", "applies_to": ["online", "physical"] }
+  ],
+  "goals": {
+    "new": [
+      { "value": "competitor_intelligence", "label": "Competitor intelligence" },
+      { "value": "find_products", "label": "Find promising products" },
+      { "value": "compare_channels", "label": "Compare selling channels" },
+      { "value": "evaluate_profitability", "label": "Evaluate profitability" },
+      { "value": "launch_plan", "label": "Prepare a launch plan" }
+    ],
+    "existing": [
+      { "value": "improve_profitability", "label": "Improve profitability" },
+      { "value": "analyze_competitors", "label": "Analyze competitors" },
+      { "value": "optimize_prices", "label": "Optimize product prices" },
+      { "value": "improve_inventory", "label": "Improve inventory selection" },
+      { "value": "expansion", "label": "Develop expansion strategies" }
+    ]
+  },
+  "advanced_fields": [
+    { "key": "selling_price", "label": "Average selling price", "unit": "per unit", "applies_to": ["online", "physical"], "stages": ["new", "existing"] },
+    { "key": "average_order_value", "label": "Average order value", "unit": "per order", "applies_to": ["online"], "stages": ["new", "existing"] },
+    { "key": "average_transaction_value", "label": "Average transaction value", "unit": "per transaction", "applies_to": ["physical"], "stages": ["new", "existing"] },
+    { "key": "product_unit_cost", "label": "Unit acquisition / production cost", "unit": "per unit", "applies_to": ["online", "physical"], "stages": ["new", "existing"] },
+    { "key": "fulfilment_cost", "label": "Fulfilment / packing cost", "unit": "per order", "applies_to": ["online"], "stages": ["new", "existing"] },
+    { "key": "payment_or_platform_fees", "label": "Payment / marketplace fees", "unit": "% of order value", "applies_to": ["online", "physical"], "stages": ["new", "existing"] },
+    { "key": "expected_return_cost", "label": "Return / refund allowance", "unit": "% of order value", "applies_to": ["online"], "stages": ["new", "existing"] },
+    { "key": "monthly_fixed_costs", "label": "Other monthly fixed operating costs", "unit": "per month", "applies_to": ["online", "physical"], "stages": ["new", "existing"] },
+    { "key": "expected_monthly_orders", "label": "Expected monthly orders", "unit": "orders / month", "applies_to": ["online"], "stages": ["new"] },
+    { "key": "current_monthly_orders", "label": "Current monthly orders", "unit": "orders / month", "applies_to": ["online"], "stages": ["existing"] },
+    { "key": "current_monthly_revenue", "label": "Current monthly revenue", "unit": "per month", "applies_to": ["online", "physical"], "stages": ["existing"] },
+    { "key": "expected_daily_footfall", "label": "Expected daily footfall", "unit": "visitors / day", "applies_to": ["physical"], "stages": ["new", "existing"] }
+  ],
+  "currencies": [
+    { "code": "INR", "symbol": "₹", "label": "Indian rupee" },
+    { "code": "USD", "symbol": "$", "label": "US dollar" },
+    { "code": "GBP", "symbol": "£", "label": "British pound" },
+    { "code": "AED", "symbol": "AED", "label": "UAE dirham" }
+  ]
+}

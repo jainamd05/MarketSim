@@ -1,0 +1,43 @@
+{
+  "search_metadata": {
+    "id": "fixture-ac-snacks",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google_autocomplete",
+    "q": "healthy snacks",
+    "gl": "in",
+    "hl": "en"
+  },
+  "suggestions": [
+    {
+      "value": "healthy snacks for weight loss",
+      "relevance": 600,
+      "type": "QUERY"
+    },
+    {
+      "value": "healthy snacks online",
+      "relevance": 590,
+      "type": "QUERY"
+    },
+    {
+      "value": "healthy snacks for kids",
+      "relevance": 580,
+      "type": "QUERY"
+    },
+    {
+      "value": "healthy snacks brands in india",
+      "relevance": 570,
+      "type": "QUERY"
+    },
+    {
+      "value": "healthy snacks for office",
+      "relevance": 560,
+      "type": "QUERY"
+    }
+  ]
+}

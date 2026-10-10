@@ -1,0 +1,90 @@
+{
+  "search_metadata": {
+    "id": "fixture-product-7400300000000000301",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google_product",
+    "product_id": "7400300000000000301",
+    "offer_view": "true",
+    "gl": "in",
+    "hl": "en"
+  },
+  "product_results": {
+    "product_id": "7400300000000000301",
+    "title": "Wildbloom Honey Raw Forest Honey 500g",
+    "brand": "Wildbloom Honey",
+    "prices": [
+      "₹549"
+    ],
+    "typical_prices": {
+      "low": "₹494",
+      "high": "₹614",
+      "shown_price": "₹549 at Wildbloom Honey"
+    },
+    "rating": 4.5,
+    "reviews": 760,
+    "description": "Raw forest honey in a glass jar.",
+    "extensions": [
+      "Vegetarian",
+      "Shelf life: 6 months"
+    ]
+  },
+  "sellers_results": {
+    "online_sellers": [
+      {
+        "position": 1,
+        "name": "Wildbloom Honey",
+        "link": "https://wildbloomhoney.example/item",
+        "base_price": "₹549.00",
+        "total_price": "₹549.00",
+        "additional_price": {
+          "shipping": "Free"
+        }
+      },
+      {
+        "position": 2,
+        "name": "BigBasket",
+        "link": "https://bigbasket.example/item",
+        "base_price": "₹565.00",
+        "total_price": "₹565.00",
+        "additional_price": {
+          "shipping": "Free"
+        }
+      }
+    ]
+  },
+  "specs_results": {
+    "Brand": "Wildbloom Honey",
+    "Form": "Whole",
+    "Diet type": "Vegetarian"
+  },
+  "reviews_results": {
+    "ratings": [
+      {
+        "stars": 5,
+        "amount": 471
+      },
+      {
+        "stars": 4,
+        "amount": 182
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Fresh and well packed",
+        "rating": 5,
+        "source": "Demo reviewer"
+      },
+      {
+        "title": "Good but pricey",
+        "rating": 4,
+        "source": "Demo reviewer"
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "search_metadata": {
+    "id": "fixture-product-7400200000000000201",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google_product",
+    "product_id": "7400200000000000201",
+    "offer_view": "true",
+    "gl": "in",
+    "hl": "en"
+  },
+  "product_results": {
+    "product_id": "7400200000000000201",
+    "title": "Kaapi Trail Attikan Estate Medium Roast Coffee Beans 250g",
+    "brand": "Kaapi Trail",
+    "prices": [
+      "₹649"
+    ],
+    "typical_prices": {
+      "low": "₹584",
+      "high": "₹726",
+      "shown_price": "₹649 at Kaapi Trail"
+    },
+    "rating": 4.6,
+    "reviews": 1840,
+    "description": "Medium roast arabica whole beans.",
+    "extensions": [
+      "Vegetarian",
+      "Shelf life: 6 months"
+    ]
+  },
+  "sellers_results": {
+    "online_sellers": [
+      {
+        "position": 1,
+        "name": "Kaapi Trail",
+        "link": "https://kaapitrail.example/item",
+        "base_price": "₹649.00",
+        "total_price": "₹649.00",
+        "additional_price": {
+          "shipping": "Free"
+        }
+      },
+      {
+        "position": 2,
+        "name": "Amazon.in",
+        "link": "https://amazonin.example/item",
+        "base_price": "₹699.00",
+        "total_price": "₹699.00",
+        "additional_price": {
+          "shipping": "Free"
+        }
+      },
+      {
+        "position": 3,
+        "name": "Flipkart",
+        "link": "https://flipkart.example/item",
+        "base_price": "₹675.00",
+        "total_price": "₹715.00",
+        "additional_price": {
+          "shipping": "₹40.00"
+        }
+      }
+    ]
+  },
+  "specs_results": {
+    "Brand": "Kaapi Trail",
+    "Form": "Whole",
+    "Diet type": "Vegetarian"
+  },
+  "reviews_results": {
+    "ratings": [
+      {
+        "stars": 5,
+        "amount": 1140
+      },
+      {
+        "stars": 4,
+        "amount": 441
+      }
+    ],
+    "reviews": [
+      {
+        "title": "Fresh and well packed",
+        "rating": 5,
+        "source": "Demo reviewer"
+      },
+      {
+        "title": "Good but pricey",
+        "rating": 4,
+        "source": "Demo reviewer"
+      }
+    ]
+  }
+}

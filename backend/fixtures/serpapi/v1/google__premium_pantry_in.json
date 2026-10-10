@@ -1,0 +1,66 @@
+{
+  "search_metadata": {
+    "id": "fixture-web-premium_pantry",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "gourmet pantry brands India",
+    "gl": "in",
+    "hl": "en"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Pantry Atelier – Gourmet Honey, Preserves & Pantry",
+      "link": "https://pantryatelier.example/",
+      "displayed_link": "pantryatelier.example",
+      "snippet": "Single-estate honey and small-batch preserves.",
+      "source": "Pantry Atelier"
+    },
+    {
+      "position": 2,
+      "title": "Wildbloom Honey | Raw Forest Honey",
+      "link": "https://wildbloomhoney.example/",
+      "displayed_link": "wildbloomhoney.example",
+      "snippet": "Raw, unprocessed forest honey in glass jars.",
+      "source": "Wildbloom Honey"
+    },
+    {
+      "position": 3,
+      "title": "Best Gourmet Pantry Brands in India",
+      "link": "https://foodjournal.example/gourmet-pantry",
+      "displayed_link": "foodjournal.example",
+      "snippet": "Our pick of gourmet pantry brands.",
+      "source": "Food Journal"
+    },
+    {
+      "position": 4,
+      "title": "Nectar & Co. – Rare Honeys",
+      "link": "https://nectar.example/",
+      "displayed_link": "nectar.example",
+      "snippet": "Acacia, jamun and other rare honey varieties.",
+      "source": "Nectar & Co."
+    },
+    {
+      "position": 5,
+      "title": "Buy Honey Online at BigBasket",
+      "link": "https://www.bigbasket.com/ps/?q=honey",
+      "displayed_link": "www.bigbasket.com",
+      "snippet": "Shop honey brands on BigBasket.",
+      "source": "BigBasket"
+    },
+    {
+      "position": 6,
+      "title": "BeeKind Organics – Organic Honey & Spreads",
+      "link": "https://beekindorganics.example/",
+      "displayed_link": "beekindorganics.example",
+      "snippet": "Certified organic raw honey.",
+      "source": "BeeKind Organics"
+    }
+  ]
+}

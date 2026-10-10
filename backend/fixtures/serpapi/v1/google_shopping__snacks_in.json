@@ -1,0 +1,170 @@
+{
+  "search_metadata": {
+    "id": "fixture-shop-snacks",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data.",
+    "google_shopping_url": "https://www.google.co.in/search?tbm=shop"
+  },
+  "search_parameters": {
+    "engine": "google_shopping",
+    "q": "healthy snacks pack",
+    "gl": "in",
+    "hl": "en"
+  },
+  "shopping_results": [
+    {
+      "position": 1,
+      "title": "Crunch Theory Roasted Makhana Peri Peri 4 x 30g",
+      "source": "Crunch Theory",
+      "price": "₹199.00",
+      "extracted_price": 199.0,
+      "rating": 4.4,
+      "reviews": 2310,
+      "delivery": "Free delivery",
+      "product_link": "https://crunchtheory.example/p/1",
+      "thumbnail": "https://images.example/thumb.png",
+      "product_id": "7400100000000000101"
+    },
+    {
+      "position": 2,
+      "title": "Makhana Mill Himalayan Salt Makhana 80g",
+      "source": "Makhana Mill",
+      "price": "₹149.00",
+      "extracted_price": 149.0,
+      "rating": 4.2,
+      "reviews": 860,
+      "delivery": "Free delivery",
+      "product_link": "https://makhanamill.example/p/2",
+      "thumbnail": "https://images.example/thumb.png",
+      "product_id": "7400100000000000102"
+    },
+    {
+      "position": 3,
+      "title": "GoodGrain Co. Baked Ragi Chips 150g",
+      "source": "GoodGrain Co.",
+      "price": "₹175.00",
+      "extracted_price": 175.0,
+      "rating": 4.3,
+      "reviews": 540,
+      "delivery": "Free delivery",
+      "product_link": "https://goodgrainco.example/p/3",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 4,
+      "title": "Trailblaze Foods Trail Mix Pack of 3 (200g each)",
+      "source": "Trailblaze Foods",
+      "price": "₹549.00",
+      "extracted_price": 549.0,
+      "rating": 4.5,
+      "reviews": 1210,
+      "delivery": "Free delivery",
+      "product_link": "https://trailblazefoods.example/p/4",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 5,
+      "title": "Snackwise Protein Bars Peanut Butter 6 Bars",
+      "source": "Snackwise",
+      "price": "₹360.00",
+      "extracted_price": 360.0,
+      "rating": 4.1,
+      "reviews": 330,
+      "delivery": "Free delivery",
+      "product_link": "https://snackwise.example/p/5",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 6,
+      "title": "Little Millet Co. Jowar Puffs 100g",
+      "source": "Little Millet Co.",
+      "price": "₹120.00",
+      "extracted_price": 120.0,
+      "rating": 4.0,
+      "reviews": 150,
+      "delivery": "Free delivery",
+      "product_link": "https://littlemilletco.example/p/6",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 7,
+      "title": "Peppy Pulses Roasted Chana Mix 200g",
+      "source": "BigBasket",
+      "price": "₹140.00",
+      "extracted_price": 140.0,
+      "rating": 4.3,
+      "reviews": 410,
+      "delivery": "Free delivery",
+      "product_link": "https://bigbasket.example/p/7",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 8,
+      "title": "Crunch Theory Makhana Combo 80g & 120g",
+      "source": "Crunch Theory",
+      "price": "₹299.00",
+      "extracted_price": 299.0,
+      "rating": 4.4,
+      "reviews": 95,
+      "delivery": "Free delivery",
+      "product_link": "https://crunchtheory.example/p/8",
+      "thumbnail": "https://images.example/thumb.png",
+      "old_price": "₹349.00",
+      "extracted_old_price": 349.0,
+      "extensions": [
+        "14% off"
+      ]
+    },
+    {
+      "position": 9,
+      "title": "Makhana Mill Assorted Snack Box",
+      "source": "Makhana Mill",
+      "price": "₹449.00",
+      "extracted_price": 449.0,
+      "rating": 4.6,
+      "reviews": 120,
+      "delivery": "Free delivery",
+      "product_link": "https://makhanamill.example/p/9",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 10,
+      "title": "NutriWorld Global Healthy Snack Variety Pack 30 Count",
+      "source": "NutriWorld Global",
+      "price": "$24.99",
+      "extracted_price": 24.99,
+      "rating": 4.5,
+      "reviews": 3100,
+      "delivery": "International shipping",
+      "product_link": "https://nutriworldglobal.example/p/10",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 11,
+      "title": "GoodGrain Co. Multigrain Chips 2 x 150g",
+      "source": "Amazon.in",
+      "price": "₹320.00",
+      "extracted_price": 320.0,
+      "rating": 4.3,
+      "reviews": 210,
+      "delivery": "Free delivery",
+      "product_link": "https://amazonin.example/p/11",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 12,
+      "title": "Trailblaze Foods Seed Mix 250g",
+      "source": "Trailblaze Foods",
+      "price": "₹299.00",
+      "extracted_price": 299.0,
+      "rating": 4.5,
+      "reviews": 640,
+      "delivery": "Free delivery",
+      "product_link": "https://trailblazefoods.example/p/12",
+      "thumbnail": "https://images.example/thumb.png"
+    }
+  ]
+}

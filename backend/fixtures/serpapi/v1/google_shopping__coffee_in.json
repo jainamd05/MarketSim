@@ -1,0 +1,170 @@
+{
+  "search_metadata": {
+    "id": "fixture-shop-coffee",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data.",
+    "google_shopping_url": "https://www.google.co.in/search?tbm=shop"
+  },
+  "search_parameters": {
+    "engine": "google_shopping",
+    "q": "roasted coffee beans 250g",
+    "gl": "in",
+    "hl": "en"
+  },
+  "shopping_results": [
+    {
+      "position": 1,
+      "title": "Kaapi Trail Attikan Estate Medium Roast Coffee Beans 250g",
+      "source": "Kaapi Trail",
+      "price": "₹649.00",
+      "extracted_price": 649.0,
+      "rating": 4.6,
+      "reviews": 1840,
+      "delivery": "Free delivery",
+      "product_link": "https://kaapitrail.example/p/1",
+      "thumbnail": "https://images.example/thumb.png",
+      "product_id": "7400200000000000201",
+      "old_price": "₹749.00",
+      "extracted_old_price": 749.0,
+      "extensions": [
+        "SALE"
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Blue Hills Roasters Single Origin Arabica Whole Beans 250g",
+      "source": "Blue Hills Roasters",
+      "price": "₹720.00",
+      "extracted_price": 720.0,
+      "rating": 4.7,
+      "reviews": 960,
+      "delivery": "Free delivery",
+      "product_link": "https://bluehillsroasters.example/p/2",
+      "thumbnail": "https://images.example/thumb.png",
+      "product_id": "7400200000000000202"
+    },
+    {
+      "position": 3,
+      "title": "Monsoon Bean Co. Monsooned Malabar Whole Beans 250g",
+      "source": "Monsoon Bean Co.",
+      "price": "₹560.00",
+      "extracted_price": 560.0,
+      "rating": 4.4,
+      "reviews": 520,
+      "delivery": "Free delivery",
+      "product_link": "https://monsoonbeanco.example/p/3",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 4,
+      "title": "Third Crack Coffee Dark Roast Espresso Blend 500g",
+      "source": "Third Crack Coffee",
+      "price": "₹1,099.00",
+      "extracted_price": 1099.0,
+      "rating": 4.5,
+      "reviews": 610,
+      "delivery": "Free delivery",
+      "product_link": "https://thirdcrackcoffee.example/p/4",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 5,
+      "title": "Estate Brew Classic Filter Coffee Beans 1kg",
+      "source": "Flipkart",
+      "price": "₹1,450.00",
+      "extracted_price": 1450.0,
+      "rating": 4.2,
+      "reviews": 1320,
+      "delivery": "Free delivery",
+      "product_link": "https://flipkart.example/p/5",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 6,
+      "title": "Roast Republic Cold Brew Coffee Beans 250g",
+      "source": "Roast Republic",
+      "price": "₹590.00",
+      "extracted_price": 590.0,
+      "rating": 4.3,
+      "reviews": 210,
+      "delivery": "Free delivery",
+      "product_link": "https://roastrepublic.example/p/6",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 7,
+      "title": "Chikmagalur Craft Peaberry Coffee Beans 250g",
+      "source": "Chikmagalur Craft",
+      "price": "₹840.00",
+      "extracted_price": 840.0,
+      "rating": 4.8,
+      "reviews": 140,
+      "delivery": "Free delivery",
+      "product_link": "https://chikmagalurcraft.example/p/7",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 8,
+      "title": "Kaapi Trail Coffee Beans Pack of 2 x 250g",
+      "source": "Kaapi Trail",
+      "price": "₹1,199.00",
+      "extracted_price": 1199.0,
+      "rating": 4.6,
+      "reviews": 300,
+      "delivery": "Free delivery",
+      "product_link": "https://kaapitrail.example/p/8",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 9,
+      "title": "Blue Hills Roasters Coffee Sampler 4 x 100g",
+      "source": "Blue Hills Roasters",
+      "price": "₹899.00",
+      "extracted_price": 899.0,
+      "rating": 4.7,
+      "reviews": 75,
+      "delivery": "Free delivery",
+      "product_link": "https://bluehillsroasters.example/p/9",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 10,
+      "title": "Monsoon Bean Co. Medium Roast Coffee Beans 250g",
+      "source": "Amazon.in",
+      "price": "₹499.00",
+      "extracted_price": 499.0,
+      "rating": 4.3,
+      "reviews": 890,
+      "delivery": "Free delivery",
+      "product_link": "https://amazonin.example/p/10",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 11,
+      "title": "Third Crack Coffee Swiss Water Decaf 250 g",
+      "source": "Third Crack Coffee",
+      "price": "₹780.00",
+      "extracted_price": 780.0,
+      "rating": 4.4,
+      "reviews": 60,
+      "delivery": "Free delivery",
+      "product_link": "https://thirdcrackcoffee.example/p/11",
+      "thumbnail": "https://images.example/thumb.png"
+    },
+    {
+      "position": 12,
+      "title": "Estate Brew House Blend Coffee Beans 200g",
+      "source": "Estate Brew",
+      "price": "₹380.00",
+      "extracted_price": 380.0,
+      "rating": 4.0,
+      "reviews": 45,
+      "delivery": "Free delivery",
+      "product_link": "https://estatebrew.example/p/12",
+      "thumbnail": "https://images.example/thumb.png"
+    }
+  ]
+}

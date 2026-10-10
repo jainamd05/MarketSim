@@ -1,0 +1,63 @@
+{
+  "search_metadata": {
+    "id": "fixture-trends-related-in",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google_trends",
+    "q": "healthy snacks",
+    "geo": "IN",
+    "date": "today 12-m",
+    "data_type": "RELATED_QUERIES"
+  },
+  "related_queries": {
+    "top": [
+      {
+        "query": "healthy snacks for weight loss",
+        "value": "100",
+        "extracted_value": 100
+      },
+      {
+        "query": "healthy snacks online",
+        "value": "87",
+        "extracted_value": 87
+      },
+      {
+        "query": "makhana",
+        "value": "74",
+        "extracted_value": 74
+      },
+      {
+        "query": "protein snacks",
+        "value": "61",
+        "extracted_value": 61
+      },
+      {
+        "query": "millet snacks",
+        "value": "48",
+        "extracted_value": 48
+      }
+    ],
+    "rising": [
+      {
+        "query": "makhana snacks",
+        "value": "+350%",
+        "extracted_value": 350
+      },
+      {
+        "query": "millet chips",
+        "value": "+260%",
+        "extracted_value": 260
+      },
+      {
+        "query": "protein chips",
+        "value": "+170%",
+        "extracted_value": 170
+      }
+    ]
+  }
+}

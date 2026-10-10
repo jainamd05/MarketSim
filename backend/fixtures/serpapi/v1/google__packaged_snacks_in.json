@@ -1,0 +1,74 @@
+{
+  "search_metadata": {
+    "id": "fixture-web-packaged_snacks",
+    "status": "Success",
+    "created_at": "2026-09-28 06:40:12 UTC",
+    "processed_at": "2026-09-28 06:40:12 UTC",
+    "total_time_taken": 1.31,
+    "fixture_note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data."
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "healthy snack brands India",
+    "gl": "in",
+    "hl": "en"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "Crunch Theory – Roasted Makhana & Healthy Snacks",
+      "link": "https://crunchtheory.example/",
+      "displayed_link": "crunchtheory.example",
+      "snippet": "Shop roasted makhana and healthy snack packs, baked not fried.",
+      "source": "Crunch Theory"
+    },
+    {
+      "position": 2,
+      "title": "Makhana Mill | Healthy Snack Brand from Bihar",
+      "link": "https://makhanamill.example/",
+      "displayed_link": "makhanamill.example",
+      "snippet": "Fox-nut snacks in four flavours. Free shipping over ₹499.",
+      "source": "Makhana Mill"
+    },
+    {
+      "position": 3,
+      "title": "Top 12 Healthy Snack Brands in India (2026)",
+      "link": "https://foodjournal.example/healthy-snack-brands",
+      "displayed_link": "foodjournal.example",
+      "snippet": "A roundup of popular healthy snack brands and what they sell.",
+      "source": "Food Journal"
+    },
+    {
+      "position": 4,
+      "title": "GoodGrain Co. – Millet Chips & Healthy Snacks",
+      "link": "https://goodgrain.example/",
+      "displayed_link": "goodgrain.example",
+      "snippet": "Ragi and multigrain chips made with millets.",
+      "source": "GoodGrain Co."
+    },
+    {
+      "position": 5,
+      "title": "Buy Healthy Snacks Online",
+      "link": "https://www.amazon.in/s?k=healthy+snacks",
+      "displayed_link": "www.amazon.in",
+      "snippet": "Shop healthy snacks on Amazon.in.",
+      "source": "Amazon.in"
+    },
+    {
+      "position": 6,
+      "title": "Trailblaze Foods – Trail Mix, Seeds & Healthy Snacks",
+      "link": "https://trailblazefoods.example/",
+      "displayed_link": "trailblazefoods.example",
+      "snippet": "Trail mixes and seed blends for snacking.",
+      "source": "Trailblaze Foods"
+    },
+    {
+      "position": 7,
+      "title": "Healthy snacking: industry report summary",
+      "link": "https://dailycommercewire.example/healthy-snacking-report",
+      "displayed_link": "dailycommercewire.example",
+      "snippet": "Commentary on the packaged healthy snacks segment.",
+      "source": "Daily Commerce Wire"
+    }
+  ]
+}

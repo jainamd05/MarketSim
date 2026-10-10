@@ -1,0 +1,143 @@
+{
+  "version": "v1",
+  "synthetic": true,
+  "created_at": "2026-09-28 06:40:12 UTC",
+  "note": "SYNTHETIC DEMO FIXTURE – fictional brands, illustrative values. Not real market data.",
+  "generator": "scripts/build_demo_fixtures.py",
+  "profile": "demo_profile() – section 14 of the brief",
+  "entries": [
+    {
+      "engine": "amazon",
+      "params": {
+        "amazon_domain": "amazon.in",
+        "k": "healthy snacks pack"
+      },
+      "file": "amazon__snacks_in.json"
+    },
+    {
+      "engine": "google",
+      "params": {
+        "gl": "in",
+        "google_domain": "google.co.in",
+        "hl": "en",
+        "q": "specialty coffee brands India"
+      },
+      "file": "google__coffee_tea_in.json"
+    },
+    {
+      "engine": "google",
+      "params": {
+        "gl": "in",
+        "google_domain": "google.co.in",
+        "hl": "en",
+        "q": "healthy snack brands India"
+      },
+      "file": "google__packaged_snacks_in.json"
+    },
+    {
+      "engine": "google",
+      "params": {
+        "gl": "in",
+        "google_domain": "google.co.in",
+        "hl": "en",
+        "q": "gourmet pantry brands India"
+      },
+      "file": "google__premium_pantry_in.json"
+    },
+    {
+      "engine": "google_autocomplete",
+      "params": {
+        "gl": "in",
+        "hl": "en",
+        "q": "healthy snacks"
+      },
+      "file": "google_autocomplete__healthy_snacks_in.json"
+    },
+    {
+      "engine": "google_news",
+      "params": {
+        "gl": "in",
+        "hl": "en",
+        "q": "packaged food brands India"
+      },
+      "file": "google_news__packaged_food_in.json"
+    },
+    {
+      "engine": "google_product",
+      "params": {
+        "gl": "in",
+        "hl": "en",
+        "offer_view": "true",
+        "product_id": "7400100000000000101"
+      },
+      "file": "google_product__7400100000000000101.json"
+    },
+    {
+      "engine": "google_product",
+      "params": {
+        "gl": "in",
+        "hl": "en",
+        "offer_view": "true",
+        "product_id": "7400200000000000201"
+      },
+      "file": "google_product__7400200000000000201.json"
+    },
+    {
+      "engine": "google_product",
+      "params": {
+        "gl": "in",
+        "hl": "en",
+        "offer_view": "true",
+        "product_id": "7400300000000000301"
+      },
+      "file": "google_product__7400300000000000301.json"
+    },
+    {
+      "engine": "google_shopping",
+      "params": {
+        "gl": "in",
+        "hl": "en",
+        "q": "roasted coffee beans 250g"
+      },
+      "file": "google_shopping__coffee_in.json"
+    },
+    {
+      "engine": "google_shopping",
+      "params": {
+        "gl": "in",
+        "hl": "en",
+        "q": "organic honey 500g"
+      },
+      "file": "google_shopping__honey_in.json"
+    },
+    {
+      "engine": "google_shopping",
+      "params": {
+        "gl": "in",
+        "hl": "en",
+        "q": "healthy snacks pack"
+      },
+      "file": "google_shopping__snacks_in.json"
+    },
+    {
+      "engine": "google_trends",
+      "params": {
+        "data_type": "RELATED_QUERIES",
+        "date": "today 12-m",
+        "geo": "IN",
+        "q": "healthy snacks"
+      },
+      "file": "google_trends__related_in.json"
+    },
+    {
+      "engine": "google_trends",
+      "params": {
+        "data_type": "TIMESERIES",
+        "date": "today 12-m",
+        "geo": "IN",
+        "q": "healthy snacks,coffee beans,organic honey"
+      },
+      "file": "google_trends__timeseries_in.json"
+    }
+  ]
+}
